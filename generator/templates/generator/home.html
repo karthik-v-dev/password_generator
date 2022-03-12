@@ -1,0 +1,49 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<div class="container text-center">
+<h1>Password Generator</h1>
+
+<form action="{% url 'password' %}">
+  <div class="form-group">
+    <label for="">Emoji's 🥵😂😃🧘🏻‍♂️ 🌍 🌦️ 🍞 🚗 📞 🎉 ❤️ 🍆 🏁 </label>
+    <textarea class="form-control" name="textarea" id="" rows="1" ></textarea>
+  </div>
+  <select name="length" width="5%">
+      <option value="6" selected>6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+      <option value="11">11</option>
+      <option value="12">12</option>
+      <option value="13">13</option>
+      <option value="14">14</option>
+      <option value="15">15</option>
+  </select>&nbsp;&nbsp;&nbsp;Length
+ 
+  
+  <div class="form-check">
+    <label class="form-check-label">
+      <input type="checkbox" class="form-check-input" name="numbers" id="" value="checkedValue">
+      UpperCase
+    </label>
+  </div>
+
+  <div class="form-check">
+    <label class="form-check-label">
+      <input type="checkbox" class="form-check-input" name="uppercase" id="" value="checkedValue">
+      Number
+    </label>
+  </div>
+  <div class="form-check">
+    <label class="form-check-label">
+      <input type="checkbox" class="form-check-input" name="special" id="" value="checkedValue">
+      Special Charecters
+    </label>
+  </div>
+ 
+ 
+  <input type="submit" value="Generate Password" class="btn btn-primary">
+</form>
+<a href="{% url 'about'%}"class="btn btn-primary" >About</a>
+</div>
